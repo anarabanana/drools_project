@@ -1,0 +1,1263 @@
+package com.sample
+import com.sample.AssessmentModelTest.UserInfo;
+
+global java.util.List myList;
+dialect "java"
+
+/*
+rule '1'
+when
+item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)
+item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)
+item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)
+item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)
+item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)
+then
+    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();
+end
+
+
+
+
+rule '3'
+   when 
+      item : UserInfo (variable_n == UserInfo.Category.var_1) && 
+      UserInfo ( level_n == UserInfo.Degree.low) and
+      item2 : UserInfo (variable_n == UserInfo.Category.var_2) && 
+      UserInfo ( level_n == UserInfo.Degree.high) and 
+      item3 : UserInfo (variable_n == UserInfo.Category.var_3) && 
+      UserInfo ( level_n == UserInfo.Degree.high) and
+      item4 : UserInfo (variable_n == UserInfo.Category.var_4) && 
+      UserInfo ( level_n == UserInfo.Degree.high) and
+      item5 : UserInfo (variable_n == UserInfo.Category.var_5) && 
+      UserInfo ( level_n == UserInfo.Degree.high)
+   then
+      item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();
+end
+
+*/
+
+rule '1'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '2'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '3'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '4'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '5'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '6'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '7'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '8'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '9'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '10'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '11'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '12'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '13'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '14'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '15'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '16'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '17'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '18'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '19'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '20'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '21'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '22'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '23'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '24'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '25'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '26'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '27'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '28'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '29'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '30'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '31'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '32'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '33'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '34'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '35'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '36'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '37'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '38'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '39'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '40'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '41'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '42'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '43'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '44'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '45'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '46'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '47'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '48'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '49'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '50'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '51'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '52'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '53'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '54'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '55'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '56'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '57'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '58'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '59'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '60'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '61'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '62'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '63'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '64'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '65'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '66'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '67'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '68'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '69'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '70'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '71'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '72'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '73'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '74'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '75'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '76'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '77'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '78'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '79'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '80'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '81'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.high)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '82'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '83'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '84'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '85'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '86'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '87'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '88'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '89'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '90'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '91'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '92'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '93'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '94'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '95'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '96'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '97'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '98'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '99'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '100'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '101'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '102'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '103'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '104'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '105'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '106'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '107'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '108'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '109'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '110'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '111'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '112'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '113'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '114'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '115'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '116'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '117'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '118'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '119'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '120'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '121'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '122'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '123'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '124'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '125'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '126'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '127'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '128'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '129'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '130'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '131'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '132'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '133'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '134'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '135'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '136'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '137'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '138'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '139'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '140'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '141'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '142'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '143'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '144'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '145'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '146'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '147'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '148'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '149'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '150'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '151'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '152'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '153'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '154'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '155'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '156'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '157'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '158'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '159'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '160'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '161'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '162'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.medium)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '163'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '164'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '165'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '166'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '167'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '168'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '169'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '170'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '171'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '172'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '173'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '174'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '175'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '176'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '177'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '178'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '179'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '180'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '181'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '182'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '183'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '184'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '185'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '186'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '187'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '188'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '189'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.high)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '190'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '191'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '192'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '193'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '194'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '195'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '196'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '197'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '198'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '199'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '200'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '201'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '202'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '203'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '204'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '205'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '206'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '207'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '208'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '209'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '210'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '211'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '212'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '213'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '214'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '215'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '216'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.medium)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '217'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '218'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '219'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '220'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '221'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '222'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '223'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '224'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '225'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.high)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '226'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '227'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '228'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '229'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '230'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '231'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '232'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '233'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '234'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.medium)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '235'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '236'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '237'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.high)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '238'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '239'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '240'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.medium)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '241'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.high)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '242'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.medium)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+rule '243'	when	item : UserInfo( variable_n == UserInfo.Category.var_1 , level_n == UserInfo.Degree.low)	item2 : UserInfo( variable_n == UserInfo.Category.var_2 , level_n == UserInfo.Degree.low)	item3 : UserInfo( variable_n == UserInfo.Category.var_3 , level_n == UserInfo.Degree.low)	item4 : UserInfo( variable_n == UserInfo.Category.var_4 , level_n == UserInfo.Degree.low)	item5 : UserInfo( variable_n == UserInfo.Category.var_5 , level_n == UserInfo.Degree.low)	then	    item.calculateResult();
+      item2.calculateResult();
+      item3.calculateResult();
+      item4.calculateResult();
+      item5.calculateResult();	end
+
