@@ -13,6 +13,9 @@ import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+import java.awt.EventQueue;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
@@ -44,116 +47,149 @@ public class UI extends JFrame implements ActionListener {
 	JRadioButton v5_low;
 	JLabel lblResult;
 	StringBuffer sb = new StringBuffer("");
+	private JLabel lblV;
 	/**
 	 * Create the panel.
 	 */
 	public UI() {
 
-		this.setTitle("Simple Sample");
+		this.setTitle("Assessment Model Test");
 		this.setSize(400, 300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new FormLayout(new ColumnSpec[]{
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,
-				FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,},
-				new RowSpec[]{FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,}));
-
-		v1_high = new JRadioButton("high");
-		add(v1_high, "10, 10");
-
-		v1_medium = new JRadioButton("medium");
-		add(v1_medium, "12, 10");
-
-		v1_low = new JRadioButton("low");
-		add(v1_low, "14, 10");
-
-		JLabel v2 = new JLabel("V2");
-		add(v2, "6, 12");
-
-		v2_high = new JRadioButton("high");
-		add(v2_high, "10, 12");
-
-		v2_medium = new JRadioButton("medium");
-		add(v2_medium, "12, 12");
-
-		v2_low = new JRadioButton("low");
-		add(v2_low, "14, 12");
-
-		JLabel V3 = new JLabel("V3");
-		add(V3, "6, 14");
-
-		v3_high = new JRadioButton("high");
-		add(v3_high, "10, 14");
-
-		v3_medium = new JRadioButton("medium");
-		add(v3_medium, "12, 14");
-
-		v3_low = new JRadioButton("low");
-		add(v3_low, "14, 14");
-
-		JLabel V4 = new JLabel("V4");
-		add(V4, "6, 16");
-
-		v4_high = new JRadioButton("high");
-		add(v4_high, "10, 16");
-
-		v4_medium = new JRadioButton("medium");
-		add(v4_medium, "12, 16");
-
-		v4_low = new JRadioButton("low");
-		add(v4_low, "14, 16");
-
-		JLabel V5 = new JLabel("V5");
-		add(V5, "6, 18");
-
-		v5_high = new JRadioButton("high");
-		add(v5_high, "10, 18");
-
-		v5_medium = new JRadioButton("medium");
-		add(v5_medium, "12, 18");
-
-		v5_low = new JRadioButton("low");
-		add(v5_low, "14, 18");
-
-		btnProcess = new JButton("Process");
-		btnProcess.addActionListener(this);
-		add(btnProcess, "6, 20");
-
-		JLabel lblResult = new JLabel("result");
-		add(lblResult, "10, 20");
-		// this.setVisible(true);
+		getContentPane().setLayout(new FormLayout(new ColumnSpec[] {
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,
+				FormFactory.RELATED_GAP_COLSPEC,
+				FormFactory.DEFAULT_COLSPEC,},
+			new RowSpec[] {
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,}));
 
 		ButtonGroup group = new ButtonGroup();
-		group.add(v1_low);
-		group.add(v1_high);
-		group.add(v1_medium);
 		ButtonGroup group2 = new ButtonGroup();
-		group2.add(v2_low);
-		group2.add(v2_high);
-		group2.add(v2_medium);
+		ButtonGroup group3 = new ButtonGroup();
+		ButtonGroup group4 = new ButtonGroup();
+		ButtonGroup group5 = new ButtonGroup();
+				
+				lblV = new JLabel("V1");
+				getContentPane().add(lblV, "2, 6, center, center");
+		
+				v1_high = new JRadioButton("high");
+				getContentPane().add(v1_high, "4, 6");
+				group.add(v1_high);
+				
+						v1_medium = new JRadioButton("medium");
+						getContentPane().add(v1_medium, "8, 6");
+						group.add(v1_medium);
+						
+								v1_low = new JRadioButton("low");
+								getContentPane().add(v1_low, "10, 6");
+								group.add(v1_low);
+				
+						JLabel v2 = new JLabel("V2");
+						getContentPane().add(v2, "2, 8, center, center");
+		
+				v2_high = new JRadioButton("high");
+				getContentPane().add(v2_high, "4, 8");
+				group2.add(v2_high);
+				
+						v2_medium = new JRadioButton("medium");
+						getContentPane().add(v2_medium, "8, 8");
+						group2.add(v2_medium);
+						
+								v2_low = new JRadioButton("low");
+								getContentPane().add(v2_low, "10, 8");
+								group2.add(v2_low);
+				
+						JLabel V3 = new JLabel("V3");
+						getContentPane().add(V3, "2, 10, center, center");
+		
+				v3_high = new JRadioButton("high");
+				getContentPane().add(v3_high, "4, 10");
+				group3.add(v3_high);
+				
+						v3_medium = new JRadioButton("medium");
+						getContentPane().add(v3_medium, "8, 10");
+						group3.add(v3_medium);
+						
+								v3_low = new JRadioButton("low");
+								getContentPane().add(v3_low, "10, 10");
+								group3.add(v3_low);
+				
+						JLabel V4 = new JLabel("V4");
+						getContentPane().add(V4, "2, 12, center, default");
+		
+				v4_high = new JRadioButton("high");
+				getContentPane().add(v4_high, "4, 12");
+				group4.add(v4_high);
+		
+				v4_medium = new JRadioButton("medium");
+				getContentPane().add(v4_medium, "8, 12");
+				group4.add(v4_medium);
+				
+						v4_low = new JRadioButton("low");
+						getContentPane().add(v4_low, "10, 12");
+						group4.add(v4_low);
+		
+				JLabel V5 = new JLabel("V5");
+				getContentPane().add(V5, "2, 14, center, center");
+		
+				v5_high = new JRadioButton("high");
+				getContentPane().add(v5_high, "4, 14");
+				group5.add(v5_high);
+		
+				v5_medium = new JRadioButton("medium");
+				getContentPane().add(v5_medium, "8, 14");
+				group5.add(v5_medium);
+		
+				v5_low = new JRadioButton("low");
+				getContentPane().add(v5_low, "10, 14");
+				group5.add(v5_low);
+		
+				btnProcess = new JButton("Process");
+				btnProcess.addActionListener(this);
+				getContentPane().add(btnProcess, "2, 16");
+				
+						lblResult = new JLabel("result");
+						getContentPane().add(lblResult, "2, 18, 3, 1, center, default");
+		// this.setVisible(true);
+
 
 	}
 	public static void main(String[] args) {
@@ -161,6 +197,7 @@ public class UI extends JFrame implements ActionListener {
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				new UI().setVisible(true);
+				System.out.println(javax.swing.SwingUtilities.isEventDispatchThread());
 			}
 		});
 	}
@@ -189,9 +226,6 @@ public class UI extends JFrame implements ActionListener {
 		DataInputStream inFromServer = new DataInputStream(s.getInputStream());
 		DataOutputStream outToServer = new DataOutputStream(s.getOutputStream());
 		// ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
-
-		UserInfo item1 = new UserInfo();
-
 		check();
 		check2();
 		check3();
@@ -201,10 +235,14 @@ public class UI extends JFrame implements ActionListener {
 		System.out.println(sb);
 		outToServer.writeUTF(sb.toString());
 
-		String result = inFromServer.readUTF();
+		String result = inFromServer.readLine();
 		System.out.println(result.toString());
-		lblResult.setText(result.toString());
-		lblResult.paintImmediately(lblResult.getVisibleRect());
+		lblResult.setText( result.toString());
+
+		sb.setLength(0);
+		outToServer.close();
+		inFromServer.close();
+		s.close();
 		
 
 	}

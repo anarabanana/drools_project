@@ -25,7 +25,7 @@ import com.sample.AssessmentModelTest.UserInfo.Degree;
  * This is a sample class to launch a rule.
  */
 public class AssessmentModelTest implements Runnable {
-	
+
 	Socket ss;
 	AssessmentModelTest(Socket ss) {
 		this.ss = ss;
@@ -41,7 +41,7 @@ public class AssessmentModelTest implements Runnable {
 
 				Socket ss = s.accept();
 				System.out.println("Server connected");
-				
+
 				new Thread(new AssessmentModelTest(ss)).start();
 
 			}
@@ -114,8 +114,10 @@ public class AssessmentModelTest implements Runnable {
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
-			DataInputStream inFromClient = new DataInputStream(ss.getInputStream());
-			DataOutputStream outToCLient = new DataOutputStream(ss.getOutputStream());
+			DataInputStream inFromClient = new DataInputStream(
+					ss.getInputStream());
+			DataOutputStream outToCLient = new DataOutputStream(
+					ss.getOutputStream());
 
 			// load up the knowledge base
 			KieServices ks = KieServices.Factory.get();
@@ -125,85 +127,89 @@ public class AssessmentModelTest implements Runnable {
 			String msg = inFromClient.readUTF();
 			System.out.println(msg);
 
-			List<String> myList = new ArrayList<String>(Arrays.asList(msg.split(",")));
-			
-			 UserInfo item1 = new UserInfo();
-			 item1.setVariable_n(Category.var_1);
-			 
-				System.out.println(myList.get(0).toString().equalsIgnoreCase("high"));
-				
-			 
-			if(myList.get(0).toString().equalsIgnoreCase("high")){
-				item1.setLevel_n(Degree.high); 
+			List<String> myList = new ArrayList<String>(Arrays.asList(msg
+					.split(",")));
+
+			UserInfo item1 = new UserInfo();
+			item1.setVariable_n(Category.var_1);
+
+
+			if (myList.get(0).toString().equalsIgnoreCase("high")) {
+				item1.setLevel_n(Degree.high);
 				System.out.println("Wohohohoho");
 			} else if (myList.get(0).toString().equalsIgnoreCase("medium")) {
-				item1.setLevel_n(Degree.medium); 
+				item1.setLevel_n(Degree.medium);
 			} else if (myList.get(0).toString().equalsIgnoreCase("low")) {
-				item1.setLevel_n(Degree.low); 
+				item1.setLevel_n(Degree.low);
 			}
-			 kSession.insert(item1);
+			kSession.insert(item1);
 
-			 UserInfo item2 = new UserInfo();
-			 item2.setVariable_n(Category.var_2);
-				if(myList.get(1).toString().equalsIgnoreCase("high")){
-					item2.setLevel_n(Degree.high); 
-				} else if (myList.get(1).toString().equalsIgnoreCase("medium")) {
-					item2.setLevel_n(Degree.medium); 
-				} else if (myList.get(1).toString().equalsIgnoreCase("low")) {
-					item2.setLevel_n(Degree.low); 
-				}
-			 kSession.insert(item2);
-			 
-			 UserInfo item3 = new UserInfo();
-			 item3.setVariable_n(Category.var_3);
-				if(myList.get(2).toString().equalsIgnoreCase("high")){
-					item3.setLevel_n(Degree.high); 
-				} else if (myList.get(2).toString().equalsIgnoreCase("medium")) {
-					item3.setLevel_n(Degree.medium); 
-				} else if (myList.get(2).toString().equalsIgnoreCase("low")) {
-					item3.setLevel_n(Degree.low); 
-				}
-			 kSession.insert(item3);
-			 
-			 UserInfo item4 = new UserInfo();
-			 item4.setVariable_n(Category.var_4);
-				if(myList.get(3).toString().equalsIgnoreCase("high")){
-					item4.setLevel_n(Degree.high); 
-				} else if (myList.get(3).toString().equalsIgnoreCase("medium")) {
-					item4.setLevel_n(Degree.medium); 
-				} else if (myList.get(3).toString().equalsIgnoreCase("low")) {
-					item4.setLevel_n(Degree.low); 
-				}
-			 kSession.insert(item4);
-			 
-			 UserInfo item5 = new UserInfo();
-			 item5.setVariable_n(Category.var_5);
-				if(myList.get(4).toString().equalsIgnoreCase("high")){
-					item5.setLevel_n(Degree.high); 
-				} else if (myList.get(4).toString().equalsIgnoreCase("medium")) {
-					item5.setLevel_n(Degree.medium); 
-				} else if (myList.get(4).toString().equalsIgnoreCase("low")) {
-					item5.setLevel_n(Degree.low); 
-				}
+			UserInfo item2 = new UserInfo();
+			item2.setVariable_n(Category.var_2);
+			if (myList.get(1).toString().equalsIgnoreCase("high")) {
+				item2.setLevel_n(Degree.high);
+			} else if (myList.get(1).toString().equalsIgnoreCase("medium")) {
+				item2.setLevel_n(Degree.medium);
+			} else if (myList.get(1).toString().equalsIgnoreCase("low")) {
+				item2.setLevel_n(Degree.low);
+			}
+			kSession.insert(item2);
+
+			UserInfo item3 = new UserInfo();
+			item3.setVariable_n(Category.var_3);
+			if (myList.get(2).toString().equalsIgnoreCase("high")) {
+				item3.setLevel_n(Degree.high);
+			} else if (myList.get(2).toString().equalsIgnoreCase("medium")) {
+				item3.setLevel_n(Degree.medium);
+			} else if (myList.get(2).toString().equalsIgnoreCase("low")) {
+				item3.setLevel_n(Degree.low);
+			}
+			kSession.insert(item3);
+
+			UserInfo item4 = new UserInfo();
+			item4.setVariable_n(Category.var_4);
+			if (myList.get(3).toString().equalsIgnoreCase("high")) {
+				item4.setLevel_n(Degree.high);
+			} else if (myList.get(3).toString().equalsIgnoreCase("medium")) {
+				item4.setLevel_n(Degree.medium);
+			} else if (myList.get(3).toString().equalsIgnoreCase("low")) {
+				item4.setLevel_n(Degree.low);
+			}
+			kSession.insert(item4);
+
+			UserInfo item5 = new UserInfo();
+			item5.setVariable_n(Category.var_5);
+			if (myList.get(4).toString().equalsIgnoreCase("high")) {
+				item5.setLevel_n(Degree.high);
+			} else if (myList.get(4).toString().equalsIgnoreCase("medium")) {
+				item5.setLevel_n(Degree.medium);
+			} else if (myList.get(4).toString().equalsIgnoreCase("low")) {
+				item5.setLevel_n(Degree.low);
+			}
 			kSession.insert(item5);
-			
+
 			kSession.fireAllRules();
 			kSession.dispose();
 
 			System.out.println("V1 index is " + item1.getResult() + " %");
-			System.out.println("V2 index is " + item2.getResult()+ " %");
-			System.out.println("V3 index is " + item3.getResult()+ " %");
-			System.out.println("V4 index is " + item4.getResult()+ " %");
-			System.out.println("V5 index is " + item5.getResult()+ " %");
-			 
-			 double total =
-			(item1.getResult()+item2.getResult()+item3.getResult
-			 ()+item4.getResult()+item5.getResult())/5;
+			System.out.println("V2 index is " + item2.getResult() + " %");
+			System.out.println("V3 index is " + item3.getResult() + " %");
+			System.out.println("V4 index is " + item4.getResult() + " %");
+			System.out.println("V5 index is " + item5.getResult() + " %");
+
+			double total = (item1.getResult() + item2.getResult()
+					+ item3.getResult() + item4.getResult() + item5.getResult()) / 5;
 
 			String vall = "Total ER Index is " + total + " %";
-			System.out.println(vall);
 
 			outToCLient.writeBytes(vall);
+			myList.clear();
+			msg = "";
+			System.out.println(msg);
+			outToCLient.close();
+			inFromClient.close();
+			ss.close();
+
 		} catch (IOException e) {
 			System.out.println(e);
 		}
